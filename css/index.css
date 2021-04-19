@@ -40,15 +40,33 @@ body {
 
 .main-content {
   display: flex;
+  flex-direction: row;
   align-items: flex-start;
+
 }
 
 .home-box {
   background-color: var(--black);
-  display: inline-flex;
-  flex-direction: column;
   margin: 10px;
   padding: 10px;
+  width: 25%;
+}
+
+@media (max-width: 1200px) { 
+  .main-content {
+    display: block;
+  }
+  .home-box {
+    width: 100%;
+  }
+ }
+
+.home-box.bio {
+  flex-grow: 2;
+}
+
+.home-box.blog-page {
+  flex-grow: 3;
 }
 
 .home-box h3 {
@@ -81,11 +99,6 @@ p.bio {
 
 p:last-child {
   margin-bottom: 0;
-}
-p,
-.tmpl-post li,
-img {
-  max-width: 37.5em; /* 600px /16 */
 }
 p,
 .tmpl-post li {
