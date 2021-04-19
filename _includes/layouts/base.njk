@@ -11,30 +11,88 @@
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
   </head>
   <body>
+  <div class="background">
+  </div>
     <header>
-      <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
 
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
       <ul class="nav">
       {%- for entry in collections.all | eleventyNavigation %}
-        <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+        <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a>
+          </li>
       {%- endfor %}
+        <li class="nav-item"><a href="http://imcool.online/" title="Projects">Projects</a></li>
+        <li class="nav-item"><a href="http://twitter.com/ohhoe" title="Twitter">Twitter</a></li>
+        <li class="nav-item"><a href="http://www.github.com/rachelnicole" title="GitHub">GitHub</a></li>
+        <li class="nav-item"><a href="http://www.instagram.com/ohhoe" title="Instagram">Instagram</a></li>
       </ul>
     </header>
     <div class="main-content">
-    <div class="home-box">
-      <p>Rachel White is a technologist, artist, and pretend-cyborg who is currently a Technical Evangelist at Datadog. Previously at American Express, Microsoft, IBM, and Adobe. She is interested in new uses for old hardware, useless robots, VR/AR/MR, and bots. She has spoken internationally about Node.js, JavaScript, Creative Coding, IoT, Artificial Intelligence, NodeBots, and hardware. She's a previous artist in residence at Pioneer Works where she worked on a series that visualized what modern cybernetic augmentation could look like with todays hardware and special effects makeup. Her other interests include glitch art, 80s horror, and indie games. Her aesthetic is fog machines, laser lights, and broken VHS tapes.</p>
+      <div class="home-box">
+        <h3>Rachel White</h3>
+        <h4>Technologist, Artist, Pretend-Cyborg</h4>
 
-      <p>She’s always looking for new opportunities to connect with people in areas related to open source, developer outreach & education, and new innovations in art and tech. She loves talking to other developers about their own personal projects, and helping new speakers workshop talk ideas. Or maybe you just want to say hi! If so, contact her at loveless [at] gmail [dot] com</p>
-    </div>
-    <div class="home-box">
-      <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+        <p class="bio">Rachel White is a technologist, artist, and pretend-cyborg who is currently a Technical Evangelist at Datadog. Before at American Express, Microsoft, IBM, and Adobe. She is interested in new uses for old hardware, useless robots, VR/AR/MR, and bots. She has spoken internationally about Node.js, JavaScript, Creative Coding, IoT, Artificial Intelligence, NodeBots, and hardware. She's a previous artist in residence at Pioneer Works where she worked on a series that visualized what modern cybernetic augmentation could look like with todays hardware and special effects makeup. Her other interests include glitch art, 80s horror, and indie games. Her aesthetic is fog machines, laser lights, and broken VHS tapes.</p>
 
-        
+        <p class="bio">She’s always looking for new opportunities to connect with people in areas related to open source, developer outreach & education, and new innovations in art and tech. She loves talking to other developers about their own personal projects, and helping new speakers workshop talk ideas. Or maybe you just want to say hi! If so, contact her at loveless [at] gmail [dot] com</p>
+      </div>
+      <div class="home-box">
+        <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
 
-        {{ content | safe }}
-      </main>
-    </div>
+          
+
+          {{ content | safe }}
+        </main>
+      </div>
+      <div class="home-box">
+          <h1 class="speaking-emphasis">Upcoming</h1>
+          <p>I am currently looking for speaking engagements for 2021</p>
+          <p></p>
+          <h1 class="speaking-emphasis">Past</h1>
+	  <p>API Days Helsinki - January 2021</p>
+          <p>AWS Summit - 2021</p>
+          <p>SKILup Day: Cloud Native and Serverless - 2021</p>
+          <p>AWS DevOps.com Webinar - 2021</p>
+          <p>Developer Week - 2021</p>
+          <p>API Days Australia - 2020</p>
+          <p>JSConf Hawaii - 2020</p>
+          <p>JSConf EU - 2019 [emcee]</p>
+          <p>NodeConf Tokyo - November 2018</p>
+          <p>JSConf EU - May 2018 [emcee]</p>
+          <p>NodeConf Tokyo - November 2017
+          </p><p>NodeConf EU - November 2017 [<a class="f5 fw6 db underline-hover dib washed-red " href="https://youtu.be/NB2gcjZoQJ0" target="_blank">video</a>]</p>
+          <p>*keynote* Node Interactive - October 2017 [<a class="f5 fw6 db underline-hover dib washed-red " href="https://youtu.be/1_c_fKQ32vE" target="_blank">video</a>]</p>
+          <p>Strange Loop - September 2017 [<a class="f5 fw6 db underline-hover dib washed-red " href="https://www.youtube.com/watch?v=L4fjPojo1yE" target="_blank">video</a>]</p>
+          <p>Web Unleashed - September 2017</p>
+          <p>Node Summit - July 2017</p>
+          <p>DinosaurJS - June 2017</p>
+          <p>WeRISE Women in Tech - June 2017</p>
+          <p>RevolutionConf - June 2017</p>
+          <p>SmashingConf Jam Sessions - June 2017</p>
+          <p>JSConf EU - May 2017 [<a class="f5 fw6 db underline-hover dib washed-red " href="https://www.youtube.com/watch?v=vji_6ofE5Wg" target="_blank">video</a>]</p>
+          <p>Penguicon - April 2017</p>
+          <p>Women Techmakers Montreal - April 2017</p>
+          <p>MVR 2.3 - March 2017</p>
+          <p>JS NYC - February 2017</p>
+          <p>SeattleJS - February 2017</p>
+          <p>ManhattanJS - January 2017</p>
+          <p>BuzzJS - January 2017</p>
+          <p>QueensJS - December 2016</p>
+          <p>Node Interactive US - November 2016 - [<a class="f5 fw6 db underline-hover dib washed-red " href="https://www.youtube.com/watch?v=209PsJ6ytKo" target="_blank">video</a>]</p>
+          <p>Nodevember - November 2016 - [<a class="f5 fw6 db underline-hover dib washed-red " href="https://www.youtube.com/watch?v=hpKPybqsPLY" target="_blank">video</a>]</p>
+          <p>Node Interactive EU - September 2016 [<a class="f5 fw6 db underline-hover dib washed-red " href="https://www.youtube.com/watch?v=o8lXzv4p0Gc" target="_blank">video</a>]</p>
+          <p>NordicJS - September 2016 - [<a class="f5 fw6 db underline-hover dib washed-red " href="https://www.youtube.com/watch?v=SLgJTTFQDqE" target="_blank">video</a>]</p>
+          <p>CascadiaJS - August 2016 - [<a class="f5 fw6 db underline-hover dib washed-red " href="https://www.youtube.com/watch?v=2oKSSnEgBDw" target="_blank">video</a>]</p>
+          <p>Node Summit - July 2016</p>
+          <p>Dinosaur JS - June 2016 - [<a class="f5 fw6 db underline-hover dib washed-red " href="https://www.youtube.com/watch?v=MUeUYEzpTgc" target="_blank">video</a>]</p>
+          <p>JSConf Budapest - May 2016 - [<a class="f5 fw6 db underline-hover dib washed-red " href="https://www.youtube.com/watch?v=PTgqSpclwvE" target="_blank">video</a>]</p>
+          <p>Amazon WebDevCon - April 2016</p>
+          <p>Brooklyn JS - December 2015</p>
+          <p>Node Interactive US - December 2015 - [<a class="f5 fw6 db underline-hover dib washed-red " href="https://www.youtube.com/watch?v=cEIYSOxDiqE" target="_blank">video</a>]</p>
+          <p>JSConf Last Call - December 2015 - [<a class="f5 fw6 db underline-hover dib washed-red " href="https://www.youtube.com/watch?v=vcGw1lnx9G4" target="_blank">video</a>]</p>
+          <p>DHTMLConf 2000 - December 2014 - [<a class="f5 fw6 db underline-hover dib washed-red " href="https://www.youtube.com/watch?v=_U8Np3_6GvQ" target="_blank">video</a>]</p>
+          <p></p>
+      </div>
     </div>
 
     <footer></footer>

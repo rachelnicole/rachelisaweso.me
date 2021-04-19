@@ -26,13 +26,21 @@ body {
   margin: 0;
   font-family: 'Fugue';
   color: var(--white);
+}
+
+.background {
   background-size: cover;
   background-image: url(/img/static.gif);
   background-repeat: no-repeat;
+  position: fixed;
   height: 100vh;
+  width: 100vw;
+  z-index: -100;
 }
+
 .main-content {
   display: flex;
+  align-items: flex-start;
 }
 
 .home-box {
@@ -41,6 +49,34 @@ body {
   flex-direction: column;
   margin: 10px;
   padding: 10px;
+}
+
+.home-box h3 {
+  font-size: 2.25rem;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.home-box h4 {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+li.secondary-nav {
+  list-style: none;
+  margin: 15px 0;
+}
+
+.home-box p {
+  line-height: 1.5em;
+  margin: 0;
+}
+
+p.bio {
+  margin-bottom: 15px;
 }
 
 p:last-child {
@@ -55,8 +91,14 @@ p,
 .tmpl-post li {
   line-height: 1.45;
 }
+a[href] {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
 a[href]:visited {
   color: var(--blue);
+  text-decoration: underline;
 }
 main {
   padding: 1rem;
@@ -67,9 +109,6 @@ main :first-child {
 header {
   background-color: var(--black);
   color: var(--white);
-}
-header a[href] {
-  color:
 }
 header:after {
   content: "";
@@ -159,17 +198,22 @@ code {
   list-style: none;
   float: left;
   margin-left: 1em;
+  text-transform: uppercase;
 }
+
 .nav-item {
   display: inline-block;
   margin-right: 1em;
 }
 .nav-item a[href]:not(:hover) {
-  text-decoration: none;
+  text-decoration: underline;
 }
+.nav-item a[href]:hover {
+ color: var(--white);
+}
+
 .nav-item-active {
   font-weight: 700;
-  text-decoration: underline;
 }
 
 /* Posts list */
@@ -194,7 +238,7 @@ code {
 .postlist-date,
 .postlist-item:before {
   font-size: 0.8125em; /* 13px /16 */
-  color: var(--darkgray);
+  color: var(--white);
 }
 .postlist-date {
   word-spacing: -0.5px;
@@ -224,8 +268,8 @@ code {
   font-size: 0.6875em; /* 11px /16 */
   padding: 0.09090909090909em 0.3636363636364em; /* 1px 4px /11 */
   margin-left: 0.8em; /* 8px /10 */
-  color: var(--darkgray);
-  border: 1px solid var(--gray);
+  color: var(--black);
+  border: 1px solid var(--blue);
   border-radius: 0.25em; /* 3px /12 */
   text-decoration: none;
   line-height: 1.8;
@@ -233,10 +277,12 @@ code {
 a[href].post-tag,
 a[href].post-tag:visited {
   color: inherit;
+  text-decoration: none;
 }
 a[href].post-tag:hover,
 a[href].post-tag:focus {
-  background-color: var(--lightgray);
+  background-color: var(--blue);
+  color: var(--black);
 }
 .postlist-item > .post-tag {
   align-self: center;
