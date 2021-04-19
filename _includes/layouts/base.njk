@@ -21,22 +21,21 @@
       {%- endfor %}
       </ul>
     </header>
+    <div class="main-content">
+    <div class="home-box">
+      <p>Rachel White is a technologist, artist, and pretend-cyborg who is currently a Technical Evangelist at Datadog. Previously at American Express, Microsoft, IBM, and Adobe. She is interested in new uses for old hardware, useless robots, VR/AR/MR, and bots. She has spoken internationally about Node.js, JavaScript, Creative Coding, IoT, Artificial Intelligence, NodeBots, and hardware. She's a previous artist in residence at Pioneer Works where she worked on a series that visualized what modern cybernetic augmentation could look like with todays hardware and special effects makeup. Her other interests include glitch art, 80s horror, and indie games. Her aesthetic is fog machines, laser lights, and broken VHS tapes.</p>
 
-    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+      <p>She’s always looking for new opportunities to connect with people in areas related to open source, developer outreach & education, and new innovations in art and tech. She loves talking to other developers about their own personal projects, and helping new speakers workshop talk ideas. Or maybe you just want to say hi! If so, contact her at loveless [at] gmail [dot] com</p>
+    </div>
+    <div class="home-box">
+      <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
 
-      <!-- Delete this message -->
-      <div class="warning">
-        <ol>
-          <li>Edit the <code>_data/metadata.json</code> with your blog’s information.</li>
-          <li>(Optional) Edit <code>.eleventy.js</code> with your <a href="https://www.11ty.dev/docs/config/">configuration preferences</a>.</li>
-          <li>Delete this message from <code>_includes/layouts/base.njk</code>.</li>
-        </ol>
-        <p><em>This is an <a href="https://www.11ty.dev/">Eleventy project</a> created from the <a href="https://github.com/11ty/eleventy-base-blog"><code>eleventy-base-blog</code> repo</a>.</em></p>
-      </div>
-      <!-- Stop deleting -->
+        
 
-      {{ content | safe }}
-    </main>
+        {{ content | safe }}
+      </main>
+    </div>
+    </div>
 
     <footer></footer>
 

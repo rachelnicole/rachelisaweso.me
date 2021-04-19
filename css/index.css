@@ -4,9 +4,16 @@
   --gray: #C0C0C0;
   --darkgray: #333;
   --navy: #17050F;
-  --blue: #082840;
+  --blue: #a0fff2;
   --white: #fff;
+  --black: #000;
 }
+
+/* @import './_debug'; */
+@font-face { font-family: 'Fugue'; src: url( '../fonts/fugue_regular.eot' ); /* IE9 Compat Modes */ src: url( '../fonts/fugue_regular.eot?#iefix' ) format( 'embedded-opentype' ), /* IE6-IE8 */ url( '../fonts/fugue_regular.woff' ) format( 'woff' ), /* Modern Browsers */ url( '../fonts/fugue_regular.ttf' ) format( 'truetype' ); /* Safari, Android, iOS */ font-style: normal; font-weight: 400; }
+@font-face { font-family: 'Fugue'; src: url( '../fonts/fugue_regular_italic.eot' ); /* IE9 Compat Modes */ src: url( '../fonts/fugue_regular_italic.eot?#iefix' ) format( 'embedded-opentype' ), /* IE6-IE8 */ url( '../fonts/fugue_regular_italic.woff' ) format( 'woff' ), /* Modern Browsers */ url( '../fonts/fugue_regular_italic.ttf' ) format( 'truetype' ); /* Safari, Android, iOS */ font-style: italic; font-weight: 400; }
+/* site css */
+.fugue { font-family: 'Fugue', sans-serif}
 
 /* Global stylesheet */
 * {
@@ -17,10 +24,25 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, system-ui, sans-serif;
-  color: var(--darkgray);
-  background-color: var(--white);
+  font-family: 'Fugue';
+  color: var(--white);
+  background-size: cover;
+  background-image: url(/img/static.gif);
+  background-repeat: no-repeat;
+  height: 100vh;
 }
+.main-content {
+  display: flex;
+}
+
+.home-box {
+  background-color: var(--black);
+  display: inline-flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+}
+
 p:last-child {
   margin-bottom: 0;
 }
@@ -33,11 +55,8 @@ p,
 .tmpl-post li {
   line-height: 1.45;
 }
-a[href] {
-  color: var(--blue);
-}
 a[href]:visited {
-  color: var(--navy);
+  color: var(--blue);
 }
 main {
   padding: 1rem;
@@ -46,7 +65,11 @@ main :first-child {
   margin-top: 0;
 }
 header {
-  border-bottom: 1px dashed var(--lightgray);
+  background-color: var(--black);
+  color: var(--white);
+}
+header a[href] {
+  color:
 }
 header:after {
   content: "";

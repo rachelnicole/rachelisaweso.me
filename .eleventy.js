@@ -18,6 +18,9 @@ module.exports = function(eleventyConfig) {
   // Alias `layout: post` to `layout: layouts/post.njk`
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
 
+  // Alias `layout: grid-item` to `layout: layouts/grid-item.njk`
+  eleventyConfig.addLayoutAlias("grid-item", "layouts/grid-item.njk");
+
   eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
   });
@@ -59,6 +62,7 @@ module.exports = function(eleventyConfig) {
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("fonts");
 
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({
