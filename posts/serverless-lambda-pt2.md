@@ -12,7 +12,7 @@ layout: layouts/post.njk
 ---
 
 
-Datadog makes setting up monitoring on your serverless function easy with our AWS Integration. Datadog’s AWS integration helps you set up monitoring on your serverless function.
+Datadog makes setting up monitoring on your serverless function easy with our AWS Integration.
 
 ![aws integration](../../img/serverless_post/aws_integration.png)
 
