@@ -59,9 +59,29 @@ body {
   .home-box {
     width: 100%;
   }
+  .tmpl-post img {
+    width: 100%;
+}
  }
 
-.home-box.bio {
+ .tmpl-post img {
+  width: 50%;
+}
+
+.tmpl-post code {
+  color: var(--white)
+}
+
+.tmpl-post pre {
+  background-color:var(--black);
+}
+
+.tmpl-post p {
+  padding: 15px 0px;
+  font-size: 1.2em;
+}
+
+ .home-box.blog {
   flex-grow: 2;
 }
 
