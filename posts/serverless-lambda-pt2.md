@@ -1,7 +1,7 @@
 ---
 title: Part 2 - How to Monitor a Serverless Application
 description: How to monitor a serverless application with Datadog
-date: 2020-04-20
+date: 2021-04-20
 tags:
   - serverless
   - node.js

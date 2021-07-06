@@ -1,7 +1,7 @@
 ---
 title: Part 1 - How to Build a Serverless Twitter Bot
 description: How to build a serverless bot with aws lambda.
-date: 2020-04-20
+date: 2021-04-20
 tags:
   - serverless
   - node.js
