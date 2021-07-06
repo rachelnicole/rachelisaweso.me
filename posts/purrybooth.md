@@ -49,6 +49,6 @@ The next thing I did was integrate my app with Datadog’s Real User Monitoring.
 
 ![RUM Dashboard](../img/purrybooth_post/RUM_dashboard.png)
 
-For more info on [Purrybooth](http://www.purrybooth.com) please try out the app for yourself at purrybooth.com. For more info on Datadog Real User Monitoring, check out [Datadog's RUM documentation](https://docs.datadoghq.com/real_user_monitoring/). 
+For more info on [Purrybooth](http://www.purrybooth.com) please try out the app for yourself at purrybooth.com, and check out the code on [github.com/rachelnicole/purrybooth](https://github.com/rachelnicole/purrybooth). For more info on Datadog Real User Monitoring, check out [Datadog's RUM documentation](https://docs.datadoghq.com/real_user_monitoring/). 
 
 
